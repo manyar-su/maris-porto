@@ -40,55 +40,52 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: "Maris Ibrahim — Open Hire Portfolio",
+    fullName: "Maris Ibrahim",
+    email: "mariezibrahim93@gmail.com",
   },
   hero: {
-    name: "John Doe",
-    p: ["I develop 3D visuals, user", "interfaces and web applications"],
+    name: "Maris Ibrahim",
+    p: ["Open Hire Anytime — Full Stack Web Developer", "React / Next.js / Node.js / Website Systems"],
   },
   contact: {
-    p: "Get in touch",
-    h2: "Contact.",
+    p: "Open Hire Anytime",
+    h2: "Contact & Hiring.",
     form: {
       name: {
-        span: "Your Name",
-        placeholder: "What's your name?",
+        span: "Nama",
+        placeholder: "Nama Anda",
       },
-      email: { span: "Your Email", placeholder: "What's your email?" },
+      email: { span: "Email", placeholder: "Email Anda" },
       message: {
-        span: "Your Message",
-        placeholder: "What do you want to say?",
+        span: "Kebutuhan Proyek",
+        placeholder: "Jelaskan kebutuhan website / sistem Anda",
       },
     },
   },
   sections: {
     about: {
-      p: "Introduction",
-      h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      p: "Profil Profesional",
+      h2: "Tentang Saya.",
+      content: `Saya adalah Full Stack Web Developer dengan pengalaman kerja sejak 2018 sampai sekarang.
+      Fokus saya pada pengembangan website, landing page, dashboard, dan sistem bisnis berbasis web.
+      Saya terbiasa mengubah kebutuhan bisnis menjadi solusi digital yang rapi, cepat, dan siap produksi.
+      Siap bergabung untuk kebutuhan Open Hire, freelance, maupun kontrak project jangka panjang.`,
     },
     experience: {
-      p: "What I have done so far",
-      h2: "Work Experience.",
+      p: "Pengalaman Kerja 2018 - Sekarang",
+      h2: "Riwayat Profesional.",
     },
     feedbacks: {
-      p: "What others say",
-      h2: "Testimonials.",
+      p: "Alasan Hire",
+      h2: "Kenapa Bekerja dengan Saya.",
     },
     works: {
-      p: "My work",
-      h2: "Projects.",
-      content: `Following projects showcases my skills and experience through
-    real-world examples of my work. Each project is briefly described with
-    links to code repositories and live demos in it. It reflects my
-    ability to solve complex problems, work with different technologies,
-    and manage projects effectively.`,
+      p: "Project Portfolio",
+      h2: "Project & Framework.",
+      content: `Setiap project menampilkan kegunaan bisnis dan base framework yang dipakai.
+      Fokus saya adalah membangun produk web yang mudah digunakan, mudah dikembangkan,
+      dan mendukung target operasional maupun pemasaran perusahaan.`,
     },
   },
 };

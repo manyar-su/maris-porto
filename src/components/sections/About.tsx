@@ -55,7 +55,32 @@ const About = () => {
         {config.sections.about.content}
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10 max-sm:justify-center">
+      <motion.details
+        variants={fadeIn("up", "spring", 0.15, 0.75)}
+        className="bg-black-100 mt-8 max-w-4xl rounded-2xl border border-[#2a3554] p-5"
+      >
+        <summary className="cursor-pointer text-[15px] font-semibold text-white">
+          Klik untuk lihat detail data diri & pengalaman
+        </summary>
+        <div className="text-secondary mt-4 space-y-2 text-[14px] leading-7">
+          <p>
+            <span className="font-semibold text-white">Alamat lengkap:</span> Kp.
+            Cipangisikan RT 02 RW 11, Desa Warnasari, Kecamatan Pangalengan,
+            Kabupaten Bandung, Jawa Barat 40378, Indonesia.
+          </p>
+          <p>
+            <span className="font-semibold text-white">Lama bekerja:</span> 2018 -
+            sekarang.
+          </p>
+          <p>
+            <span className="font-semibold text-white">Kolaborasi:</span> Telah
+            mengerjakan website dan sistem bisnis untuk beberapa perusahaan dalam
+            negeri termasuk KPBS Mitra Ternak.
+          </p>
+        </div>
+      </motion.details>
+
+      <div className="mt-16 flex flex-wrap gap-10 max-sm:justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

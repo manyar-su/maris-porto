@@ -16,13 +16,34 @@ const Hero = () => {
         </div>
 
         <div>
+          <img
+            src="/profile-maris.jpg"
+            alt="Maris Ibrahim"
+            className="mb-5 h-20 w-20 rounded-2xl border-2 border-[#6b7cff] object-cover shadow-lg"
+          />
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className="text-[#915EFF]">{config.hero.name}</span>
+            Hi, I'm <span className="breathing-name">{config.hero.name}</span>
           </h1>
           <p className={`${styles.heroSubText} text-white-100 mt-2`}>
             {config.hero.p[0]} <br className="hidden sm:block" />
             {config.hero.p[1]}
           </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            <a
+              href="mailto:mariezibrahim93@gmail.com"
+              className="rounded-xl bg-[#2563eb] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#1d4ed8]"
+            >
+              Email
+            </a>
+            <a
+              href="https://wa.me/6282298511930?text=Halo%20Maris%2C%20kami%20tertarik%20untuk%20hire%20kamu"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl bg-[#16a34a] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#15803d]"
+            >
+              WhatsApp
+            </a>
+          </div>
         </div>
       </div>
 

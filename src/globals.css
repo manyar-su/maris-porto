@@ -126,6 +126,30 @@
   transform: translateZ(0);
 }
 
+.breathing-name {
+  background: linear-gradient(90deg, #38bdf8, #22c55e, #ef4444, #38bdf8);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: breathingGradient 4.8s ease-in-out infinite;
+}
+
+@keyframes breathingGradient {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.95;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.95;
+  }
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {
