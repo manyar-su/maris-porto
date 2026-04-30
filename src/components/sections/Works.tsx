@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { github } from "../../assets";
 import { SectionWrapper } from "../../hoc";
 import { projects } from "../../constants";
 import { fadeIn } from "../../utils/motion";
@@ -11,32 +12,50 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
   name,
   description,
   tags,
+  image,
   sourceCodeLink,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.35, 0.65)}>
       <div className="bg-tertiary w-full rounded-2xl p-5 sm:w-[320px]">
-        <div className="mt-2">
+        <div className="relative h-[220px] w-full overflow-hidden rounded-2xl bg-[#0f1527]">
+          <img
+            src={image}
+            alt={name}
+            className="h-full w-full object-cover"
+            onError={(e) => {
+              const target = e.currentTarget;
+              target.src = "/logo.png";
+              target.className = "h-full w-full object-contain p-8";
+            }}
+          />
+
+          <div className="absolute inset-0 m-3 flex justify-end">
+            <button
+              type="button"
+              onClick={() => window.open(sourceCodeLink, "_blank")}
+              className="black-gradient flex h-10 w-10 items-center justify-center rounded-full"
+            >
+              <img
+                src={github}
+                alt="github"
+                className="h-1/2 w-1/2 object-contain"
+              />
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-5">
           <h3 className="text-[22px] font-bold text-white">{name}</h3>
           <p className="text-secondary mt-2 text-[14px] leading-6">{description}</p>
         </div>
+
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p key={tag.name} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
-        </div>
-
-        <div className="mt-5">
-          <a
-            href={sourceCodeLink}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex rounded-xl bg-[#2563eb] px-4 py-2 text-sm font-semibold text-white hover:bg-[#1d4ed8]"
-          >
-            Lihat Repository
-          </a>
         </div>
       </div>
     </motion.div>
