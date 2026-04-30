@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 
-import { EarthCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
@@ -52,9 +51,18 @@ const Contact = () => {
 
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
+        className="bg-black-100 flex min-h-[220px] items-center justify-center rounded-2xl p-8 text-center xl:flex-1"
       >
-        <EarthCanvas />
+        <div>
+          <p className="text-secondary text-[14px] uppercase tracking-widest">
+            Siap Bergabung
+          </p>
+          <h3 className="mt-3 text-2xl font-bold text-white">Open Hire Anytime</h3>
+          <p className="text-secondary mt-3 max-w-md text-sm leading-6">
+            Siap untuk project website, dashboard, landing page, dan pengembangan
+            sistem bisnis berbasis web dengan eksekusi cepat dan komunikasi jelas.
+          </p>
+        </div>
       </motion.div>
     </div>
   );

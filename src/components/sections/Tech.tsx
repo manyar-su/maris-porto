@@ -1,4 +1,3 @@
-import { BallCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
 import { technologies } from "../../constants";
 import { Header } from "../atoms/Header";
@@ -39,12 +38,18 @@ const Tech = () => {
         </div>
       </div>
 
-      <div className="mt-14 flex flex-row flex-wrap justify-center gap-10">
-        {technologies.map((technology) => (
-          <div className="h-28 w-28" key={technology.name}>
-            <BallCanvas icon={technology.icon} />
-          </div>
-        ))}
+      <div className="mt-14 rounded-2xl border border-[#2a3554] bg-[#121025] p-6">
+        <h4 className="text-[18px] font-semibold text-white">Framework & Tools</h4>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {technologies.map((technology) => (
+            <span
+              key={technology.name}
+              className="rounded-full bg-[#1f2b46] px-3 py-1 text-xs text-white"
+            >
+              {technology.name}
+            </span>
+          ))}
+        </div>
       </div>
     </>
   );
